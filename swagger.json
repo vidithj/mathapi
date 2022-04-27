@@ -1,0 +1,254 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Math API",
+      "description": "Simple REST API for math functions",
+      "version": "0.1.9"
+    },
+    "servers": [
+      {
+        "url": "localhost:8080/mathapi/v1",
+        "description": "localhost base url"
+      }
+    ],
+    "paths": {
+      "/min": {
+        "post": {
+          "summary": "Returns quantifier number of min from the array of numbers",
+           "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                   "properties": {
+                    "quantifier": {
+                    "type": "number",
+                    "description": "calculate number of specific result"
+                  },
+                  "list": {
+                    "type": "array",
+                   "items": {
+                      "type": "number"
+                    }
+                  }
+                   }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Array of min numbers",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "500":{
+              "description": "Error if the input is not valid",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+       "/max": {
+        "post": {
+          "summary": "Returns quantifier number of max from the array of numbers",
+           "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                   "properties": {
+                    "quantifier": {
+                    "type": "number",
+                    "description": "calculate number of specific result"
+                  },
+                  "list": {
+                    "type": "array",
+                   "items": {
+                      "type": "number"
+                    }
+                  }
+                   }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Array of min numbers",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "500":{
+              "description": "Error if the input is not valid",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+       "/avg": {
+        "post": {
+          "summary": "Returns average of the array of numbers",
+           "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                   "properties": {
+                  "list": {
+                    "type": "array",
+                   "items": {
+                      "type": "number"
+                    }
+                  }
+                   }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Array of min numbers",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "500":{
+              "description": "Error if the input is not valid",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+       "/median": {
+        "post": {
+          "summary": "Returns median of the array of numbers",
+           "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                   "properties": {
+                  "list": {
+                    "type": "array",
+                   "items": {
+                      "type": "number"
+                    }
+                  }
+                   }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Array of min numbers",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "500":{
+              "description": "Error if the input is not valid",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+        "/percentile": {
+        "post": {
+          "summary": "Returns qth percentile from the array of numbers",
+           "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                   "properties": {
+                    "quantifier": {
+                    "type": "number",
+                    "description": "calculate number of specific result"
+                  },
+                  "list": {
+                    "type": "array",
+                   "items": {
+                      "type": "number"
+                    }
+                  }
+                   }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Array of min numbers",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "500":{
+              "description": "Error if the input is not valid",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
