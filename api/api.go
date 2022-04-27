@@ -6,12 +6,17 @@ import (
 	"sort"
 )
 
+//validate the length of input list
 func validateLength(list []int) bool {
 	return len(list) != 0
 }
+
+//validate the quantifier
 func validateQuantifier(quantifier int) bool {
 	return quantifier >= 0
 }
+
+//calculate min of the array
 func CalcMin(list []int, quantifier int) ([]int, error) {
 	if !validateLength(list) || !validateQuantifier(quantifier) {
 		return nil, errors.New("validate the list and quantifier")
@@ -19,6 +24,8 @@ func CalcMin(list []int, quantifier int) ([]int, error) {
 	sort.Ints(list)
 	return list[:quantifier], nil
 }
+
+//calculate max of the array
 func CalcMax(list []int, quantifier int) ([]int, error) {
 	if !validateLength(list) || !validateQuantifier(quantifier) {
 		return nil, errors.New("validate the list and quantifier")
@@ -28,6 +35,8 @@ func CalcMax(list []int, quantifier int) ([]int, error) {
 
 	return list[:quantifier], nil
 }
+
+//calculate avg of the array
 func CalcAvg(list []int) (float64, error) {
 	if !validateLength(list) {
 		return 0, errors.New("validate the list is not empty")
@@ -41,6 +50,8 @@ func CalcAvg(list []int) (float64, error) {
 	avg := (float64(sum)) / (float64(len(list)))
 	return avg, nil
 }
+
+//calculate median of the array
 func CalcMedian(list []int) (float64, error) {
 	if !validateLength(list) {
 		return 0, errors.New("validate the list is not empty")
@@ -57,6 +68,8 @@ func CalcMedian(list []int) (float64, error) {
 
 	return medianValue, nil
 }
+
+//calculate percentile acc to nearest rank method for the array
 func CalcPercentile(list []int, quantifier int) (int, error) {
 	if !validateLength(list) {
 		return 0, errors.New("validate the list is not empty")

@@ -7,6 +7,8 @@ Swagger file included with API route information.
 # Testing
 All the api logic is present in api.go .Test cases around each function has been added in api_test.go
 
+mathapi/api	3.767s	coverage: 97.3% of statements
+
 ## Base Path
 mathapi/v1/percentile
 ## Sample Request
