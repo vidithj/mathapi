@@ -1,5 +1,5 @@
 # mathapi
-simple rest api for math functions.This API calculates min,max,avg,median and percentile of a list of numbers.
+simple REST API for math functions.This API calculates min,max,avg,median and percentile of a list of numbers. This REST API was created using gokit . 
 
 # API Documentation
 Swagger file included with API route information.
@@ -30,7 +30,7 @@ localhost:8080/mathapi/v1/percentile
 #### POST /median
 ```
 {
-	"list":[9, 10,2,12, 13, 13, 13, 15, 15, 16, 16, 18, 22, 23, 24, 24, 25],
+	"list":[9, 10,2,12, 13, 13, 13, 15, 15, 16, 16, 18, 22, 23, 24, 24, 25]
    
 }
 ```
@@ -38,7 +38,7 @@ localhost:8080/mathapi/v1/percentile
 #### POST /avg
 ```
 {
-	"list":[9, 10,2,12, 13, 13, 13, 15, 15, 16, 16, 18, 22, 23, 24, 24, 25],
+	"list":[9, 10,2,12, 13, 13, 13, 15, 15, 16, 16, 18, 22, 23, 24, 24, 25]
     
 }
 ```
